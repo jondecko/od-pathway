@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" format=3 uid="uid://b7ibpldu3cjqt"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1_solid"]
+[ext_resource type="Script" uid="uid://bsi1qturf8c5k" path="res://od_pathway/od_pathway.gd" id="2_pathway"]
+
+[resource]
+script = ExtResource("1_solid")
+origin_type = 4
+collision_shape_type = 0
+script_class = ExtResource("2_pathway")
+classname = "od_pathway"
+description = "A brush-based pathway overlay. Draw a brush shape on the floor and it becomes a triplanar-textured pathway that blends into the surrounding ground."
+class_properties = Dictionary[String, Variant]({
+"edge_fade_width": 0.3,
+"pathway_alpha": 1.0,
+"snap_to_floor": true,
+"step_length_divs": 4,
+"y_offset": 0.01
+})
+class_property_descriptions = Dictionary[String, Variant]({
+"edge_fade_width": "Width of alpha fade at polygon edges (0-0.5).",
+"pathway_alpha": "Overall opacity of the pathway (0.0 = invisible, 1.0 = full).",
+"snap_to_floor": "Raycast vertices down onto floor collision geometry.",
+"step_length_divs": "Grid subdivisions per world unit. Higher = smoother but more vertices.",
+"y_offset": "How far above the floor the pathway mesh hovers."
+})
+meta_properties = Dictionary[String, Variant]({
+"color": Color(0.6, 0.5, 0.3, 1)
+})
+node_class = "Node3D"
