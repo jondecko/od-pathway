@@ -4,6 +4,14 @@ A self-contained [func_godot](https://github.com/func-godot/func_godot_plugin) b
 
 Draw a brush on the floor in TrenchBroom, texture it with a tileable image (dirt, gravel, etc.), and it becomes a blended pathway that sits just above the surrounding geometry.
 
+<table>
+<tr>
+<td><img src="https://github.com/user-attachments/assets/61053147-9dfb-4972-aa6a-da4a7d2d920c" /></td>
+<td><img src="https://github.com/user-attachments/assets/9f8faffc-8b1b-4363-bc41-65695b98df23" /></td>
+<td><img src="https://github.com/user-attachments/assets/ef7b10e7-356d-4270-9d4e-11e946016ccb" /></td>
+</tr>
+</table>
+
 ## How It Works
 
 The brush you draw in TrenchBroom is just a shape template. Its upward-facing floor faces define the outline, then the original mesh gets deleted.
