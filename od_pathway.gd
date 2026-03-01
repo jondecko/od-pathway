@@ -132,7 +132,7 @@ func _extract_mesh_data(mesh: Mesh) -> MeshData:
 			for vi in range(verts.size()):
 				indices.append(vi)
 
-		var tri_count: int = indices.size() / 3
+		var tri_count: int = int(indices.size() / 3.0)
 		for t in range(tri_count):
 			var idx := t * 3
 			var v0 := verts[indices[idx]]
@@ -356,15 +356,15 @@ func _generate_pathway_mesh(data: MeshData, brush_texture: Texture2D = null) -> 
 				continue
 
 			var tl: int = r * cols + c
-			var tr: int = tl + 1
+			var t_r: int = tl + 1
 			var bl: int = tl + cols
 			var br: int = bl + 1
 
 			st.add_index(tl)
-			st.add_index(tr)
+			st.add_index(t_r)
 			st.add_index(bl)
 
-			st.add_index(tr)
+			st.add_index(t_r)
 			st.add_index(br)
 			st.add_index(bl)
 
